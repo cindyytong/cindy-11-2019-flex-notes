@@ -1,6 +1,7 @@
-// 1. How are prototypes different from constructor Functions?
-// - unlike class inheritance, everything is an object and we ue prototypes to link inheritance through the __proto__ property which points to the prototype of the superclass 
+// 1. How are prototypes different from constructor functions?
+
 // 2. How are classes/constructors connected to one another in a prototypal inheritance chain?
+
 // 3. How is prototypal inheritance different from classical inheritance?
 
 
@@ -16,8 +17,10 @@
 
   console.log(`Dog: name returns: ${Dog.hasOwnProperty("name")}`); // ? 
   console.log(`Dog: bark returns: ${Dog.hasOwnProperty("bark")}`); // ? 
-  console.log(`Dog proto bark returns: ${Dog.__proto__.hasOwnProperty("bark")}`); // ? 
-  console.log(`blue's __proto__ is: ${blue.__proto__}`) // ? 
+
+console.log(blue.__proto__ === Dog.prototype) // ? 
+
+console.log(Dog.__proto__ === Dog.prototype) // ? 
 
 
   

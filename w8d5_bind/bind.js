@@ -42,21 +42,25 @@ bark.apply(blue, ['chloe']);
 console.log("From call:");
 bark.call(blue, "zoe");
 
-// 6. bind 
+// // 6. bind 
 console.log("From bind:");
 
+
 let bindedBark = bark.bind(blue);
+bindedBark("chloe");
 console.log(bindedBark);
-// bindedBark("chloe");
 
-console.log(bindedBark === bark);
+// console.log(bindedBark === bark);
 
-// ///////////////////////
-// // III. How do we implement bind? 
+// // ///////////////////////
+// // // III. How do we implement bind? 
 
 Function.prototype.myBind = function(context, args){
     let that = this;
+    // debugger
     return function(){
+        // debugger
+        // console.log(this);
         return that.apply(context, args);
     }
 }
